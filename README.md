@@ -4,7 +4,7 @@
 
 - Three players
 
-- Medieval setting
+- 18th century setting
 
 - Win condition: Become the most powerful member of the High Council
 

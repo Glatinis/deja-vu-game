@@ -2,8 +2,7 @@ const Kingdom = require("../classes/kingdom");
 const Phases = require("../utils/phaseEnums");
 
 class GameState {
-  constructor(id) {
-    this.id = id;
+  constructor() {
     this.players = [];
     this.kingdom = null;
     this.currentPhase = null;
@@ -18,6 +17,7 @@ class GameState {
   }
 
   startGame() {
+    this.started = true;
     this.kingdom = new Kingdom();
     this.currentPhase = Phases.VOTE;
   }
