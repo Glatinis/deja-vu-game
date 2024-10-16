@@ -10,3 +10,5 @@ class Kingdom {
     };
   }
 }
+
+module.exports = Kingdom;
