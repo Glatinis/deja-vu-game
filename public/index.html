@@ -5,18 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="/socket.io/socket.io.js"></script>
     <title>Deja Vu Game</title>
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <h1>Deja Vu Game</h1>
+    <h2 style="color: red" id="error"></h2>
+    <div id="mainMenu">
+        <h1>Deja Vu Game</h1>
 
-    <button>Create Game</button>
-    <div id="games"></div>
+        <button id="createGame">Create Game</button>
+        <div id="games"></div>
+    </div>
 
-    <script>
-        var socket = io();
+    <div id="lobbyMenu" class="hidden">
+        <h1>Game Lobby</h1>
+        <h2 id="lobbyName"></h2>
+        <h2>Other players</h2>
+        <div id="players"></div>
+    </div>
 
-        let name = prompt("Enter your player name: ");
-        socket.emit("register", name);
-    </script>
+    <div id="gameScreen" class="hidden">
+
+    <script src="js/index.js"></script>
 </body>
 </html>

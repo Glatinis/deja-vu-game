@@ -1,5 +1,5 @@
 const { STARTING_VALUES } = require("../../utils/constants");
-const { ResourceTypes } = require("../../utils/enums");
+const { ResourceTypes } = require("../../utils/resourceEnums");
 
 class Player {
   constructor(name, resourceType) {

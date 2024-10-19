@@ -1,4 +1,4 @@
-const { STARTING_VALUES } = require("../../utils/constants");
+const { STARTING_VALUES } = require("../utils/constants");
 
 
 class Kingdom {
