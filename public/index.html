@@ -3,17 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@0;1&display=swap" rel="stylesheet">
     <script src="/socket.io/socket.io.js"></script>
     <title>Deja Vu Game</title>
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <h2 style="color: red" id="error"></h2>
     <div id="mainMenu">
-        <h1>Deja Vu Game</h1>
-
-        <button id="createGame">Create Game</button>
-        <div id="games"></div>
+        <h1 class="shadow" id="title">Deja Vu Game</h1>
+        <h2 class="left-indent shadow" id="lobbyTitle">Lobbies</h2>
+        <button id="createGame">
+            <span class="btnText">Start Your Council</span>
+        </button>
+        <div style="display: flex">
+            <object class="left-indent" data="assets/Path.svg" type="image/svg+xml"></object> 
+            <div id="games"></div>
+        </div>
     </div>
 
     <div id="lobbyMenu" class="hidden">

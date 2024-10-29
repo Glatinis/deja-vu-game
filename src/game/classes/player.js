@@ -4,7 +4,7 @@ const { ResourceTypes } = require("../../utils/resourceEnums");
 class Player {
   constructor(name, resourceType) {
     this.name = name;
-    this.resourceType = resourceType;
+    this.mainResource = resourceType;
 
     this.power = STARTING_VALUES.power;
     this.influence = STARTING_VALUES.influence;
@@ -16,7 +16,6 @@ class Player {
       publicRelations: STARTING_VALUES.publicRelations,
     };
 
-    this.mainResource = resourceType;
     this.agenda = this.generateRandomAgenda();
 
     this.entourage = {

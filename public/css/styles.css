@@ -1,0 +1,74 @@
+* {
+  font-weight: 400;
+}
+
+body {
+  background-color: #544B3B;
+  font-family: 'IM Fell DW Pica', serif;
+  color: #c0cfd8;
+}
+
+#title {
+  text-align: center;
+  font-size: 120px;
+  position: relative;
+  animation: float 3s ease-in-out infinite;
+}
+
+#lobbyTitle {
+  text-align: left;
+  font-size: 75px;
+  color: #6bbf59; 
+}
+
+#createGame {
+  position: absolute;
+  left: 45.5%;
+  top: 30%;
+  width: 156px;
+  height: 156px;
+  background: #1B998B;
+  border: 5px solid #000000;
+  border-radius: 50%;
+  box-shadow: -6px 6px 6px 0px rgba(0, 0, 0, 0.2);
+}
+
+#createGame:hover {
+  cursor: pointer;
+}
+
+#games {
+  margin-left: 2.5vw;
+}
+
+.btnText {
+  font-size: 32px;
+  font-weight: 400px;
+  color: #c0cfd8;
+  font-family: 'IM Fell DW Pica', serif;
+}
+
+.shadow {
+  text-shadow: -6px 6px 4px rgba(0, 0, 0, 0.2);
+}
+
+.left-indent {
+  margin-left: 4vw;
+}
+
+.hidden {
+  display: none;
+}
+
+
+@keyframes float {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-8px);
+  }
+  100% {
+      transform: translateY(0);
+  }
+};

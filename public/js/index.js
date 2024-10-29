@@ -68,9 +68,21 @@ socket.on("playerJoined", (data) => {
 
 socket.on("startConfirm", (data) => {
   lobbyMenu.classList.add("hidden");
-  gameScreen.classList.remove("hidden");
+  // gameScreen.classList.remove("hidden");
+  loadPage("game")
 });
 
 socket.on("error", (data) => {
   document.getElementById("error").textContent = data;
 })
+
+function loadPage(pageName) {
+  fetch(pageName + ".html")
+    .then(response => response.text())
+    .then(html => {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, "text/html");
+      document.body.innerHTML = doc.body.innerHTML;
+  })
+  .catch(error => console.error('Error loading game page:', error));
+}

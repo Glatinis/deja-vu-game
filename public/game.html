@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Player UI</title>
+</head>
+<body>
+  <div class="player-container" style="float: right">
+    <!-- Player Header -->
+    <div id="player-header" class="section">
+      <label for="player-name">Name:</label>
+      <p id="player-name">PH</p>
+      
+      <label for="resource-type">Main Resource:</label>
+      <p id="resource-type">PH</p>
+    </div>
+
+    <!-- Power -->
+    <div class="section">
+      <label for="power-slider">Power: <span id="power-label">PH</span></label>
+      <input type="range" id="power-slider" class="slider" min="0" max="100" value="50">
+    </div>
+
+    <!-- Influence -->
+    <div class="section">
+      <label for="influence-slider">Influence: <span id="influence-label">PH</span></label>
+      <input type="range" id="influence-slider" class="slider" min="0" max="100" value="60">
+    </div>
+
+    <!-- Tyranny -->
+    <div class="section">
+      <label for="tyranny-slider">Tyranny: <span id="tyranny-label">PH</span></label>
+      <input type="range" id="tyranny-slider" class="slider" min="0" max="100" value="30">
+    </div>
+
+    <!-- Resources -->
+    <div class="section">
+      <label for="military-slider">Military Resources: <span id="military-label">PH</span></label>
+      <input type="range" id="military-slider" class="slider" min="0" max="100" value="40">
+    </div>
+
+    <div class="section"> 
+      <label for="wealth-slider">Wealth Resources: <span id="wealth-label">PH</span></label>
+      <input type="range" id="wealth-slider" class="slider" min="0" max="100" value="80">
+    </div>
+
+    <div class="section">
+      <label for="pr-slider">Public Relations Resources: <span id="pr-label">PH</span></label>
+      <input type="range" id="pr-slider" class="slider" min="0" max="100" value="20">
+    </div>
+  </div>
+</body>
+</html>
