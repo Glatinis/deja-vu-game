@@ -5,3 +5,5 @@ class Policy {
     this.effects = effects;
   }
 }
+
+module.exports = Policy;

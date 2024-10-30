@@ -1,7 +1,7 @@
 const lobbyMenu = document.getElementById("lobbyMenu");
 const mainMenu = document.getElementById("mainMenu");
 const gameScreen = document.getElementById("gameScreen");
-let plrId;
+let plrId, gameId;
 
 let socket = io();
 
@@ -41,6 +41,8 @@ socket.on("activeGames", (data) => {
 socket.on("joinConfirm", (data) => {
   console.log(`You have joined ${data.host}'s game with ID ${data.id}`);
   console.log(data);
+  gameId = data.id;
+
   lobbyMenu.classList.remove("hidden");
   mainMenu.classList.add("hidden");
   document.getElementById("lobbyName").textContent = `${data.host}'s game`;
@@ -70,11 +72,12 @@ socket.on("startConfirm", (data) => {
   lobbyMenu.classList.add("hidden");
   // gameScreen.classList.remove("hidden");
   loadPage("game")
+  initGameSocket(gameId, plrName);
 });
 
 socket.on("error", (data) => {
   document.getElementById("error").textContent = data;
-})
+});
 
 function loadPage(pageName) {
   fetch(pageName + ".html")

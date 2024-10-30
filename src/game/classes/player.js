@@ -1,5 +1,5 @@
 const { STARTING_VALUES } = require("../../utils/constants");
-const { ResourceTypes } = require("../../utils/resourceEnums");
+const { generateRandomAgenda } = require("../math/playerMath");
 
 class Player {
   constructor(name, resourceType) {
@@ -16,7 +16,7 @@ class Player {
       publicRelations: STARTING_VALUES.publicRelations,
     };
 
-    this.agenda = this.generateRandomAgenda();
+    this.agenda = generateRandomAgenda();
 
     this.entourage = {
       managers: [],
@@ -25,22 +25,6 @@ class Player {
     };
 
     this.domain = {};
-  }
-
-  generateRandomAgenda() {
-    const max = 400;
-    const min = 200;
-    const resourceTypes = ["military", "wealth", "publicRelations"];
-    const nonMainResources = resourceTypes.filter(
-      (res) => res !== this.resourceType
-    );
-    const randomResource =
-      nonMainResources[Math.floor(Math.random() * nonMainResources.length)];
-
-    return {
-      resource: ResourceTypes[randomResource.toUpperCase()],
-      targetLevel: Math.floor(Math.random() * (max - min + 1) + min),
-    };
   }
 }
 

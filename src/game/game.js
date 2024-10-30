@@ -1,4 +1,4 @@
-const GameState = require("./gamestate");
+const GameState = require("./gamestate/gameState");
 
 class Game {
   constructor(id, host) {
