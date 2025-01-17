@@ -1,4 +1,4 @@
-const MAX_VALUES = {
+const MAXVALUES = {
   power: 1000,
   influence: 1000,
   military: 500,
@@ -7,7 +7,7 @@ const MAX_VALUES = {
   tyranny: 100,
 };
 
-const MIN_VALUES = {
+const MINVALUES = {
   power: 0,
   influence: 0,
   military: 0,
@@ -16,7 +16,7 @@ const MIN_VALUES = {
   tyranny: 0,
 };
 
-const STARTING_VALUES = {
+const STARTINGVALUES = {
   power: 0,
   influence: 50,
   military: 50,
@@ -26,7 +26,7 @@ const STARTING_VALUES = {
 };
 
 module.exports = {
-  MAX_VALUES,
-  MIN_VALUES,
-  STARTING_VALUES,
+  MAXVALUES: MAXVALUES,
+  MINVALUES: MINVALUES,
+  STARTINGVALUES: STARTINGVALUES,
 };

@@ -1,12 +1,12 @@
-const { STARTING_VALUES } = require("../utils/constants");
+const { STARTINGVALUES: STARTINGVALUES } = require("../utils/constants");
 
 
 class Kingdom {
   constructor() {
     this.resources = {
-      military: STARTING_VALUES.military,
-      wealth: STARTING_VALUES.wealth,
-      publicRelations: STARTING_VALUES.publicRelations,
+      military: STARTINGVALUES.military,
+      wealth: STARTINGVALUES.wealth,
+      publicRelations: STARTINGVALUES.publicRelations,
     };
   }
 }

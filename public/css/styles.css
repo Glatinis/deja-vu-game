@@ -41,6 +41,17 @@ body {
   margin-left: 2.5vw;
 }
 
+#player-container {
+  padding: 8px;
+  border: 2px solid #C0CFD8;
+  border-radius: 5px;
+  background-color: #433C2F;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
 .btnText {
   font-size: 32px;
   font-weight: 400px;

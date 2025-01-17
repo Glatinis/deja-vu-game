@@ -1,4 +1,5 @@
 const { getGameFromPlayer } = require("./socketUtils");
+const { STARTINGVALUES } = require("../game/utils/constants");
 
 module.exports = function (io, game) {
   const gameNamespace = io.of(`/${game.id}`); // Create game namespace
@@ -7,7 +8,17 @@ module.exports = function (io, game) {
   gameNamespace.on("connection", (socket) => {
     console.log(`Player ${clients[socket.id]} connected to game ${game.id}`);
     
-    socket.join(game.id); // Join the room with the game's ID
+    socket.join(game.id);
+
+    // Give initial data, values, prices here
+    socket.emit("init", {
+      STARTINGVALUES: STARTINGVALUES
+    });
+
+    socket.on("initCfrm", (data) => {
+      clients[socket.id] = data;
+      console.log(clients)
+    })
 
     socket.on("action", (actionData) => {
       console.log("Received action:", actionData);

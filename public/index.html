@@ -31,7 +31,58 @@
         <div id="players"></div>
     </div>
 
+    <!--                                                                                   -->
+    <!--                                   ---------------                                 -->
+    <!--                                   | GAME SCREEN |                                 -->
+    <!--                                   ---------------                                 -->
+    <!--                                                                                   -->
+
     <div id="gameScreen" class="hidden">
+      <div id="player-container" style="float: right">
+        <div id="player-header" class="section">
+          <label for="player-name">Name:</label>
+          <p id="player-name">PH</p>
+          
+          <label for="resource-type">Main Resource:</label>
+          <p id="resource-type">PH</p>
+        </div>
+    
+        <div class="section">
+          <label for="power-slider">Power: <span id="power-label">PH</span></label>
+          <input type="range" id="power-slider" class="slider" min="0" max="1000" value="50" disabled>
+        </div>
+    
+        <div class="section">
+          <label for="influence-slider">Influence: <span id="influence-label">PH</span></label>
+          <input type="range" id="influence-slider" class="slider" min="0" max="1000" value="60" disabled>
+        </div>
+    
+        <div class="section">
+          <label for="tyranny-slider">Tyranny: <span id="tyranny-label">PH</span></label>
+          <input type="range" id="tyranny-slider" class="slider" min="0" max="100" value="30" disabled>
+        </div>
+    
+        <div class="section">
+          <label for="military-slider">Military Resources: <span id="military-label">PH</span></label>
+          <input type="range" id="military-slider" class="slider" min="0" max="500" value="40" disabled>
+        </div>
+    
+        <div class="section"> 
+          <label for="wealth-slider">Wealth Resources: <span id="wealth-label">PH</span></label>
+          <input type="range" id="wealth-slider" class="slider" min="0" max="500" value="80" disabled>
+        </div>
+    
+        <div class="section">
+          <label for="pr-slider">Public Relations Resources: <span id="publicRelations-label">PH</span></label>
+          <input type="range" id="publicRelations-slider" class="slider" min="0" max="500" value="20" disabled>
+        </div>
+      </div>
+        <div id="vote">
+          <button onclick="handleVote('1')" class="voteBtn" id="1">Option 1</button>
+          <button onclick="handleVote('2') "class="voteBtn" id="2">Option 2</button>
+          <button onclick="handleVote('3')" class="voteBtn" id="3">Option 3</button>
+        </div>
+    </div>
 
     <script src="js/index.js"></script>
     <script src="js/game.js"></script>
